@@ -1,5 +1,5 @@
 import { Link } from "@inertiajs/react";
-import AppLayout from "../layouts/app-layout";
+import AppLayout from "@/layouts/app-layout";
 
 export default function Home() {
     return (
