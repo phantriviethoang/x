@@ -13,10 +13,8 @@ Creating Reusable Layouts with React Children
 23:04 -
 React Props and the Children Prop
 
-
 25:35 -
 Section Resources
-
 
 25:35 -
 Creating Models and Migrations with Artisan
@@ -42,10 +40,8 @@ Creating Posts with Inertia Forms
 01:42:29 -
 Displaying Validation Errors and cn Utility
 
-
 01:49:51 -
 Section Resources
-
 
 01:49:51 -
 Defining One-to-Many Relationships
@@ -58,4 +54,3 @@ Eager Loading Users with Posts
 
 02:15:09 -
 Fixing Missing user_id in Existing Posts
-
