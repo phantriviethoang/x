@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
@@ -32,16 +33,16 @@ class PostController extends Controller
 
     public function store(Request $request): RedirectResponse
     {
-        // Validate
         $validated = $request->validate([
             'title' => 'required|string|min:3|max:255',
             'body' => 'required|string|min:10|max:255',
         ]);
 
-        // Create the post in the db
-        Post::create($validated);
+        Post::create([
+            ...$validated,
+            'user_id' => User::inRandomOrder()->first()->id,
+        ]);
 
-        // redirect to /posts
         return redirect('/posts');
     }
 }
