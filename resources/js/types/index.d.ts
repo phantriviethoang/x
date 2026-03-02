@@ -14,4 +14,17 @@ export interface User {
     email: string;
     created_at: string;
     updated_at: string;
+    posts?: Post[];
+    comments?: Comment[];
+}
+
+export interface Comment {
+    id: number;
+    body: string;
+    created_at: string;
+    updated_at: string;
+    post_id: number;
+    user_id: number;
+    user?: User;
+    post?: Post;
 }
